@@ -46,7 +46,7 @@ export default function ComplaintForm() {
 
   return (
     <Flex className='complaint' bg="#F7F9FC" justify="center" align="center">
-      <Box   bg="white" boxShadow="lg" borderRadius="lg" p={8}>
+      <Box bg="white" boxShadow="lg" borderRadius="lg" p={8}>
         <Flex direction={['column', 'row']} gap={10}>
           {/* Complaint Form */}
           <Box flex="1.5"  borderRadius="md">

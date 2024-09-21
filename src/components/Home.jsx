@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Box textAlign="center" py={10} px={6}>
       {/* Hero Section */}
-      <Box bg="blue.500" color="white" py={20} px={10} mb={10} borderRadius="md">
+      <Box className='hii' color="black" py={20} px={10} mb={10} borderRadius="md">
         <Heading as="h1" size="2xl" mb={4}>
           Welcome to Our Complaint Management System
         </Heading>
