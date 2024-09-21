@@ -25,7 +25,7 @@ export default function ComplaintForm() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/message', formData, {
+      const response = await axios.post('https://railway-server.onrender.com/api/message', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setSubmittedId(response.data.id);
@@ -37,7 +37,7 @@ export default function ComplaintForm() {
 
   const searchHandler = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/message/${trackId}`);
+      const response = await axios.get(`https://railway-server.onrender.com/api/message/${trackId}`);
       setSearchResult(response.data);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -186,7 +186,7 @@ export default function ComplaintForm() {
                   <Text><strong>Problem:</strong> {searchResult.problem}</Text>
                   <Text><strong>Status:</strong> {searchResult.message}</Text>
                   {searchResult.image && (
-                    <Image src={`http://localhost:5000/${searchResult.image}`} alt="Complaint" mt={4} />
+                    <Image src={`https://railway-server.onrender.com/${searchResult.image}`} alt="Complaint" mt={4} />
                   )}
                 </Box>
               )}
