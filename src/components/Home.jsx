@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Box textAlign="center" py={10} px={6}>
       {/* Hero Section */}
-      <Box bg={"purple"} color="white" py={20} px={10} mb={10} borderRadius="md">
+      <Box bgGradient="linear(to-b, red, white)" color="white" py={20} px={10} mb={10} borderRadius="md">
         <Heading as="h1" size="2xl" mb={4}>
           Welcome to Our Complaint Management System
         </Heading>
@@ -26,6 +26,7 @@ export default function Home() {
         </Text>
         <Button
           as={Link}
+        //   bgGradient="linear(to-b, red, white)"
           to="/cum"
           size="lg"
           colorScheme="teal"
@@ -44,7 +45,8 @@ export default function Home() {
       <SimpleGrid textAlign={"center"} columns={[1, 2, 3]} spacing={15}>
         {problems.map((problem) => (
           <Box
-            key={problem.value}
+          key={problem.value}
+          bgGradient="linear(to-b, black, white)"
             borderWidth="2px"
             borderRadius="lg"
             overflow="hidden"
