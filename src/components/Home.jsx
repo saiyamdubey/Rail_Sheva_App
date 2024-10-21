@@ -369,7 +369,7 @@ export default function Home() {
                 focusBorderColor="blue.500"
               >
                 {problems.map((p) => (
-                  <option key={p.value} value={p.value}>{p.name}</option>
+                  <option color='black' key={p.value} value={p.value}>{p.name}</option>
                 ))}
               </Select>
             </FormControl>
