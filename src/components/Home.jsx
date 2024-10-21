@@ -345,6 +345,7 @@ export default function Home() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
+                color={"white"}
                 focusBorderColor="blue.500"
               />
             </FormControl>
@@ -360,20 +361,38 @@ export default function Home() {
               />
             </FormControl>
 
+            {/* <FormControl id="problem" isRequired>
+              <FormLabel>Problem</FormLabel>
+              <Select
+                value={problem}
+                onChange={(e) => setProblem(e.target.value)}
+                placeholder="Select the problem"
+                color={"white"}
+                option={"black"}
+                focusBorderColor="blue.500"
+              >
+                {problems.map((p) => (
+                  <option color='black' placeholder='black' key={p.value} value={p.value}>{p.name}</option>
+                ))}
+              </Select>
+            </FormControl> */}
             <FormControl id="problem" isRequired>
               <FormLabel>Problem</FormLabel>
               <Select
                 value={problem}
                 onChange={(e) => setProblem(e.target.value)}
                 placeholder="Select the problem"
-                color={"black"}
+                color="white" // Controls the color of the selected text
                 focusBorderColor="blue.500"
               >
                 {problems.map((p) => (
-                  <option color='black' key={p.value} value={p.value}>{p.name}</option>
+                  <option key={p.value} value={p.value} style={{ color: 'black' }}>
+                    {p.name}
+                  </option>
                 ))}
               </Select>
             </FormControl>
+
 
             <FormControl id="message" isRequired>
               <FormLabel>Describe the Problem</FormLabel>
@@ -385,7 +404,7 @@ export default function Home() {
               />
             </FormControl>
 
-            <FormControl id="image">
+            <FormControl id="image" isRequired>
               <FormLabel>Upload Image</FormLabel>
               <Input
                 type="file"
