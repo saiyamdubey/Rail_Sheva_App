@@ -366,6 +366,7 @@ export default function Home() {
                 value={problem}
                 onChange={(e) => setProblem(e.target.value)}
                 placeholder="Select the problem"
+                color={"black"}
                 focusBorderColor="blue.500"
               >
                 {problems.map((p) => (
