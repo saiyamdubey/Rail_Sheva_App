@@ -235,7 +235,7 @@
 
 
 import { useState } from 'react';
-import { Box, Button, Heading, Text, SimpleGrid, Input, Select, FormControl, FormLabel, VStack, Image, Flex, Link } from '@chakra-ui/react';
+import { Box, Button, Heading, Text, SimpleGrid, Input, Select, FormControl, FormLabel, VStack, Image, Link } from '@chakra-ui/react';
 import axios from 'axios';
 
 export default function Home() {
